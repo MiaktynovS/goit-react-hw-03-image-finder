@@ -14,6 +14,7 @@ export class Modal extends Component {
   }
 
   handleBackdrop = e => {
+    e.stopPropagation();
     if (e.currentTarget === e.target) {
       this.props.onClose();
     }
